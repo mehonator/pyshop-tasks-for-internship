@@ -1,6 +1,14 @@
 import unittest
-from tasks.task1_calc_score import get_score
 from collections import namedtuple
+
+import sys
+import os
+current = os.path.dirname(os.path.realpath(__file__))
+parent_directory = os.path.dirname(current)
+sys.path.append(parent_directory)
+
+from task_1_calc_score.task1_calc_score import get_score
+
 
 OffsetEstimatesScores = namedtuple(
     "OffsetEstimatesScores", ["offset", "home", "away"]
